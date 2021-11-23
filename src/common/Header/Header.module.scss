@@ -1,0 +1,59 @@
+.header {
+  width: 100%;
+  padding-top: 15px;
+
+  > .header__container {
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  .logo {
+
+    > img {
+      width: 50px;
+      height: auto;
+    }
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+
+    &-menu {
+      list-style-type: none;
+
+      &__item {
+        display: inline-block;
+        padding: 0 15px;
+
+        > a {
+          font-size: 16px;
+          text-decoration: none;
+        }
+      }
+    }
+
+    &-buttons {
+      padding-left: 15px;
+      border-left: 1px solid #ccc;
+
+      > button {
+        padding: 7px 15px;
+        font-size: 16px;
+        border-radius: 5px;
+      }
+
+      &__button-login {
+        background-color: transparent;
+        border: 1px solid #eee;
+      }
+
+      &__button-sign-up {
+        margin-left: 15px;
+        background-color: #eee;
+        border: none;
+      }
+    }
+  }
+}

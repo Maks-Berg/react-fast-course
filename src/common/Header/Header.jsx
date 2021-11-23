@@ -1,5 +1,8 @@
 import React from "react";
 
+// React Library
+import { Link } from "react-router-dom";
+
 // Scss
 import styles from "./Header.module.scss";
 
@@ -12,7 +15,7 @@ import logoImage from "../../assets/images/Header/logo.svg"
 const Header = () => {
     return (
         <header className={styles.header}>
-            <div className={styles.wrapper}>
+            <div className={`${styles.header__container} container`}>
                 <div className={styles.logo}>
                     <img src={logoImage} alt="logo"/>
                 </div>
@@ -21,14 +24,14 @@ const Header = () => {
                         {dataMenu.map((item, idx) =>
                             (
                                 <li className={styles['nav-menu__item']} key={`key nav menu item ${idx}`}>
-                                    <a href={item.link}>{item.title}</a>
+                                    <Link to={item.link}>{item.title}</Link>
                                 </li>
                             )
                         )}
                     </ul>
                     <div className={styles['nav-buttons']}>
-                        <button className={styles['nav-buttons__button-login']}></button>
-                        <button className={styles['nav-buttons__button-sign-up']}></button>
+                        <button className={styles['nav-buttons__button-login']}>Login</button>
+                        <button className={styles['nav-buttons__button-sign-up']}>Sign Up</button>
                     </div>
                 </nav>
             </div>
