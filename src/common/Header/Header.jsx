@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import styles from "./Header.module.scss";
 
 // Data
-import {dataMenu} from "./dataMenu";
+import { dataMenu } from "./dataMenu";
 
 // Images
 import logoImage from "../../assets/images/Header/logo.svg"
